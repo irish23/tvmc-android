@@ -86,9 +86,9 @@ extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved)
 
   std::string appName = CCompileInfo::GetAppName();
   StringUtils::ToLower(appName);
-  std::string mainClass = "org/xbmc/" + appName + "/Main";
-  std::string bcReceiver = "org/xbmc/" + appName + "/XBMCBroadcastReceiver";
-  std::string frameListener = "org/xbmc/" + appName + "/XBMCOnFrameAvailableListener";
+  std::string mainClass = "ag/tvaddons/" + appName + "/Main";
+  std::string bcReceiver = "ag/tvaddons/" + appName + "/XBMCBroadcastReceiver";
+  std::string frameListener = "ag/tvaddons/" + appName + "/XBMCOnFrameAvailableListener";
 
   jclass cMain = env->FindClass(mainClass.c_str());
   if(cMain)
