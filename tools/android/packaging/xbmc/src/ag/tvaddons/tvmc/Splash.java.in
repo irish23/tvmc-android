@@ -411,7 +411,7 @@ public class Splash extends Activity {
   }
 
   private void MigrateUserData() {
-      String sOldUserDir = getExternalFilesDir(null).getParentFile().getParentFile() + "/ag.tvaddons.xbmc/files/.xbmc";
+      String sOldUserDir = getExternalFilesDir(null).getParentFile().getParentFile() + "/ag.tvaddons.@APP_NAME_LC@/files/.xbmc";
       File fOldUserDir = new File(sOldUserDir);
       File fNewUserDir = new File(getExternalFilesDir(null), ".@APP_NAME_LC@");
       String sKodiMigrated = fNewUserDir.getAbsolutePath() + "/.kodi_data_was_migrated";

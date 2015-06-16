@@ -95,7 +95,7 @@ std::vector<androidPackage> CXBMCApp::m_applications;
 
 CXBMCApp::CXBMCApp(ANativeActivity* nativeActivity)
   : CJNIContext(nativeActivity)
-  , CJNIBroadcastReceiver("ag/tvaddons/kodi/XBMCBroadcastReceiver")
+  , CJNIBroadcastReceiver("ag/tvaddons/tvmc/XBMCBroadcastReceiver")
   , m_wakeLock(NULL)
 {
   m_activity = nativeActivity;
@@ -354,7 +354,7 @@ int CXBMCApp::android_printf(const char *format, ...)
   // For use before CLog is setup by XBMC_Run()
   va_list args;
   va_start(args, format);
-  int result = __android_log_vprint(ANDROID_LOG_VERBOSE, "Kodi", format, args);
+  int result = __android_log_vprint(ANDROID_LOG_VERBOSE, "TVMC", format, args);
   va_end(args);
   return result;
 }
